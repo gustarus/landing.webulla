@@ -39,4 +39,4 @@ Run the webpack dev server on 8080 port:
 npm run start
 ```
 
-Open in browser [http://localhost:8080/](http://localhost:8080/) and who-a-la!
+Open in the browser [http://localhost:8080/](http://localhost:8080/) and who-a-la!
