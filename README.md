@@ -40,3 +40,8 @@ npm run start
 ```
 
 Open in the browser [http://localhost:8080/](http://localhost:8080/) and who-a-la!
+
+### Copyrights
+Kondratenko Pavel  
+Linkedin: https://ru.linkedin.com/in/kondratenkopa  
+Contact with me: gate@webulla.ru
