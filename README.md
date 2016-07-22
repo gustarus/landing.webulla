@@ -21,12 +21,12 @@ In my project I use:
 ### Launch the application locally
 First we need clone the repo:
 ```bash
-git clone git@github.com:gustarus/landing.webulla.git
+git clone git@github.com:gustarus/landing.webulla.ru.git
 ```
 
 Go to the cloned repo:
 ```bash
-cd landing.webulla
+cd landing.webulla.ru
 ```
 
 Install packages via npm:
