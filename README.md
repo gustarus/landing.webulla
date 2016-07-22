@@ -1,4 +1,4 @@
-## <img src="http://webulla.ru/static/logo-60x60.png" width="22px" height="22px" style="vertical-align: middle;" /> Webulla studio landing page
+## <img src="http://webulla.ru/static/logo-60x60.png" width="19px" height="19px" style="vertical-align: middle;" /> Webulla studio landing page
 
 This is the scenific project which I've made with new technologies for me like react.js, webpack and others. I've done this for selfimprovement. 
 
