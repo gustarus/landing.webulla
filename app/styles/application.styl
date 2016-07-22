@@ -1,0 +1,21 @@
+@import "helpers/variables.styl"
+@import "helpers/resets.styl"
+@import "helpers/mixins.styl"
+@import "helpers/fonts.styl"
+@import "components/**/*.styl"
+
+body
+  font-family $fontFamilyRegular
+  font-weight normal
+  font-style normal
+  line-height 1.4
+  color #111111
+  font-adaptive('content')
+
+a
+  color #111111
+  text-decoration none
+  &:hover,
+  &:focus
+    color #111111
+    text-decoration underline

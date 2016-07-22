@@ -1,0 +1,165 @@
+.scene_order
+  height 100vh
+  z-index 104
+  &__header
+    text-align center
+    text-transform uppercase
+    color #333
+    font-adaptive('header')
+  &__content
+    +above('m')
+      width 100%
+      display block
+      position absolute
+      top 50%
+      transform translateY(-50%)
+      text-align center
+    +below('s')
+      width 280px
+      margin 40px auto 0 auto
+      position relative
+      display block
+  &__form
+    display inline-block
+    position relative
+  &__offer
+    position relative
+    +above('m')
+      display inline-block
+      vertical-align top
+    +below('s')
+      display block
+    &-header
+      text-align justify
+      font-adaptive('content')
+      +above('l')
+        position absolute
+        top -50px
+        left 0
+      +at('m')
+        position absolute
+        top 116px
+        left 0
+    &-blocks
+      display block
+    &-block
+      display inline-block
+      margin-left 20px
+      color #333
+      cursor pointer
+      text-align center
+      letter-spacing 1px
+      border 1px solid white
+      vertical-align top
+      box-sizing border-box
+      +above('l')
+        width 158px
+        height 158px
+      +at('m')
+        width 96px
+        height 96px
+      +below('s')
+        width 78px
+        height 78px
+        margin-top 20px
+      &:first-of-type
+        margin-left 0
+      &:hover
+      &:focus
+      &_checked
+        color #E95F54
+        text-decoration none
+        border-color #E95F54
+      &_cutaway
+        background #CCFFCC
+      &_landing
+        background #CCFFFF
+      &_website
+        background #FFFF99
+      &-label
+        padding 0 10px
+        display inline-block
+        position relative
+        top 50%
+        transform translateY(-50%)
+        font-adaptive('bricks')
+  &__contacts
+    +above('m')
+      width 250px
+      height 96px
+      margin-left 20px
+      display inline-block
+      vertical-align top
+    +below('s')
+      margin-top 20px
+  &__input
+    appearance none
+    border 1px
+    display block
+    width 100%
+    padding 0 10px
+    line-height 1.42857143
+    color #555
+    background-color #fff
+    background-image none
+    border-radius 1px
+    outline none
+    box-sizing border-box
+    font-family $fontFamilyRegular
+    font-adaptive('content')
+    +above('m')
+      height 38px
+      padding-top 6px
+      padding-bottom 6px
+      line-height 26px
+    +below('s')
+      height 34px
+      padding-top 5px
+      padding-bottom 5px
+      line-height 24px
+    &_text
+      border 1px solid #ccc
+      box-shadow inset 0 1px 1px rgba(0, 0, 0, .075)
+      box-sizing border-box
+      &:focus
+      &:hover
+        border 1px solid #E95F54
+    &_invalid
+      border 1px solid #E95F54
+      background rgba(255, 242, 243, 1)
+    &_contact
+      +above('m')
+        margin-top 23px
+      +below('s')
+        margin-top 20px
+    &_submit
+      margin-top 20px
+      cursor pointer
+      border 0
+      background #E95F54
+      color #fff
+      letter-spacing 1px
+      +noTouch()
+        &:hover
+        &:focus
+          opacity 0.7
+  &__important
+    display none
+  &__feedback
+    text-align center
+    +above('m')
+      position absolute
+      width 100%
+      bottom 40px
+      left 0
+    +below('s')
+      margin-top 25px
+    &-item
+      display block
+      text-transform uppercase
+      font-adaptive('small')
+      margin-top 5px
+      &:hover
+        text-decoration underline
+      &:first-of-type
+        margin-top 0

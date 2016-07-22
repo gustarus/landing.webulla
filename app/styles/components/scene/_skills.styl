@@ -1,0 +1,75 @@
+$block-l = 250px
+$block-m = 180px
+$block-s = 300px
+$block-xs = 260px
+
+.scene_skills
+  z-index 101
+  border-top 0
+  border-bottom 1px dashed #E95F54
+  &__blocks
+    white-space nowrap
+    text-align center
+    margin-top 40px
+  &__block
+    vertical-align top
+    text-decoration none
+    text-align left
+    position relative
+    display block
+    +above('m')
+      display inline-block
+      margin 0 15px
+      +above('l')
+        width $block-l
+      +at('m')
+        width $block-m
+    +below('s')
+      margin 40px auto 0 auto
+      &:first-of-type
+        margin-top 0
+      +at('s')
+        width $block-s
+      +below('xs')
+        width $block-xs
+    &:hover
+    &:focus
+      text-decoration none
+    &-label
+      letter-spacing 1px
+      font-adaptive('label')
+      +at('s')
+        text-align center
+    &-preview
+      background #f6f6f6
+      text-align center
+      border-radius 1px
+      transition background 0.2s ease
+      +above('m')
+        margin-top 10px
+        padding 20px
+        +above('l')
+          width $block-l
+        +at('m')
+          width $block-m
+      +below('s')
+        padding 15px
+        margin-top 10px
+        +at('s')
+          width $block-s - 60px
+          margin-right auto
+          margin-left auto
+        +below('xs')
+          width $block-xs
+    &:hover &-preview
+    &:focus &-preview
+      background #d5f6f1
+    &-picture
+      vertical-align middle
+      width 100%
+      height 100%
+    &-description
+      margin-top 14px
+      white-space normal
+      text-align justify
+      font-adaptive('content')

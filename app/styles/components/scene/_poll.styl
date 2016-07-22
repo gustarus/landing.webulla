@@ -1,0 +1,86 @@
+.scene_poll
+  background-image url('~@core/images/space.png')
+  background-color #112538
+  border none
+  &__header
+    color #fff
+  &__content
+    color #fff
+    font-adaptive('content')
+    margin-top 40px
+    +above('m')
+      width 400px
+      margin-right auto
+      margin-left auto
+  &__question
+    &-label
+      font-weight normal
+      font-adaptive('label')
+    & &-answer
+      display block
+      color #fff
+      line-height 30px
+      vertical-align middle
+      &:first-of-type
+        margin-top 10px
+      &:hover
+      &:focus
+        text-decoration none
+      &:before
+        content ''
+        display inline-block
+        width 10px
+        height 10px
+        margin -2px 8px 0 2px
+        border-radius 10px
+        vertical-align middle
+        border 1px solid #112538
+        box-shadow 0 0 0 2px #fff
+      +noTouch()
+        &:hover:before
+        &:focus:before
+          background-color #fff
+    & &-text
+      display block
+      width 100%
+      margin-top 10px
+      min-height 100px
+      max-height 300px
+      border-radius 1px
+      border 0 none
+      color #111
+      outline none
+      box-sizing border-box
+      resize vertical
+      font-adaptive('content')
+      font-family $fontFamilyRegular
+      padding 10px
+    & &-button
+      display block
+      width 100%
+      background-color transparent
+      letter-spacing 1px
+      border-radius 1px
+      border 1px solid #fff
+      color #fff
+      margin-top 10px
+      text-align center
+      cursor pointer
+      font-family $fontFamilyRegular
+      font-adaptive('content')
+      box-sizing border-box
+      height 32px
+      line-height 32px
+      padding 0
+      transition color 0.05s ease, background-color 0.1s linear
+      &:hover
+      &:focus
+        color #fff
+        text-decoration none
+      +noTouch()
+        &:hover
+        &:focus
+          background-color #fff
+          color #112538
+  &__complete
+    font-adaptive('label')

@@ -1,0 +1,40 @@
+.theater
+  &__button
+    position fixed
+    padding 0 20px
+    background #E95F54
+    z-index 200
+    color #fff
+    border-radius 1px
+    letter-spacing 1px
+    transition right 0.3s linear, opacity 0.1s linear
+    +above('m')
+      height 38px
+      line-height 38px
+      bottom 20px
+      right 20px
+    +below('s')
+      height 34px
+      line-height 34px
+      bottom 10px
+      right 10px
+    &:hover
+    &:focus
+      color #fff
+      text-decoration none
+    +noTouch()
+      &:hover
+      &:focus
+        opacity 0.7
+    &_hidden
+      right -320px
+      opacity 0
+      &:hover
+      &:focus
+        opacity 0
+
+  &_mobile &__button
+    &:hover
+    &:focus
+      opacity 1
+

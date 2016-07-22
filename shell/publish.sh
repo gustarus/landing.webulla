@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# function to display commands
+exe() { echo "\$ $@" ; "$@"; }
+
+# local configuration
+localPath="$1"
+
+# project configuration
+projectName='Webulla'
+
+# target configuration
+targetUser='user'
+targetHost='host.com'
+targetPath='/path/to/project/folder'
+
+
+# validate local path argument
+if [[ -z "${localPath// }" ]]; then
+	echo "localPath was not passed!"
+	echo "Usage: sh publish.sh [/path/to/directory]."
+	exit
+fi
+
+# validate if package.json exists
+if [ ! -f "${localPath}/package.json" ]; then
+    echo "File package.json not found in folder \"${localPath}\"!"
+    exit
+fi
+
+
+# process deploy
+echo "Deploy project ${projectName} to the ${targetHost} with user ${targetUser}."
+
+echo "Step into root folder"
+exe cd ${localPath}
+
+echo "Clean local assets..."
+exe rm -rf web/assets/*
+
+echo "Build local assets..."
+exe npm run build
+
+echo "Clean remote assets..."
+exe ssh ${targetUser}@${targetHost} rm -rf ${targetPath}/web/assets/*
+
+echo "Publish..."
+exe scp .babelrc .gitignore package.json webpack.config.js ${targetUser}@${targetHost}:${targetPath}/
+exe scp -r app config shell web vendor ${targetUser}@${targetHost}:${targetPath}/
+
+echo "Complete!"
+

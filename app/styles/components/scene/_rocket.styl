@@ -1,0 +1,188 @@
+$smoothDuration = 0.15s
+$smoothType = linear
+
+.scene_rocket
+  height 400vh
+  z-index 100
+  padding 0
+  background rgb(97, 200, 209)
+  &__container
+    width 100vw
+    height 100vh
+    position absolute
+    top 0
+    left 0
+  &__header
+    display block
+    position absolute
+    text-transform uppercase
+    color #333
+    font-family $fontFamilySemiBold
+    +portrait()
+      width 100%
+      top 15%
+      text-align center
+      padding 0 20px
+      +below('xs')
+        top 6%
+    +landscape()
+      +above('l')
+        width 100%
+        top 15%
+        left 0
+        text-align center
+      +at('m')
+        top 15%
+        left 40%
+        text-align left
+      +below('s')
+        top 15%
+        left 37%
+        text-align left
+    &-title
+      font-weight normal
+      font-adaptive('header')
+    &-description
+      margin-top 20px
+      font-weight normal
+      font-adaptive('label')
+  &__rocket
+    display inline-block
+    position absolute
+    z-index 200
+    +portrait()
+      bottom 8%
+      left 50%
+      transform translateX(-50%)
+    +landscape()
+      +above('l')
+        bottom 8%
+        left 50%
+        transform translateX(-50%)
+      +below('m')
+        top 0
+        left 8%
+        height 100%
+    &-icon
+      display block
+      position relative
+      +portrait()
+        width 150px
+        height 300px
+      +landscape()
+        +above('l')
+          width 200px
+          height 400px
+        +at('m')
+          width 150px
+          height 300px
+          top 50%
+          transform translateY(-50%)
+        +below('s')
+          width 120px
+          height 240px
+          top 50%
+          transform translateY(-50%)
+    &-guide
+      opacity 0
+      &_visible
+        opacity 1
+      &-icon
+        width 200px
+        height 80px
+      &_left
+        display block
+        position absolute
+        bottom 53%
+        right 66%
+      &_left &-label
+        position absolute
+        bottom 80px
+        left 5px
+      &_right
+        display block
+        position absolute
+        top 33%
+        left 54%
+      &_right &-label
+        position absolute
+        bottom 10px
+        right 5px
+      +below(m)
+        display none
+  &__clouds
+    &_right
+      position absolute
+      z-index 201
+      +portrait()
+        +below('s')
+          height 220px
+          right -90px
+          bottom -70px
+      +landscape()
+        +at('hd')
+          height 820px
+          left -160px
+          bottom -250px
+        +at('xl')
+          height 530px
+          right -160px
+          bottom -150px
+        +at('l')
+          height 530px
+          right -160px
+          bottom -150px
+        +at('m')
+          height 380px
+          right -170px
+          bottom -130px
+        +below('s')
+          height 220px
+          right -90px
+          bottom -70px
+    &_left
+      position absolute
+      z-index 201
+      +portrait()
+        +below('s')
+          height 230px
+          left -90px
+          bottom -70px
+      +landscape()
+        +at('hd')
+          height 820px
+          left -160px
+          bottom -250px
+        +at('xl')
+          height 540px
+          left -130px
+          bottom -165px
+        +at('l')
+          height 540px
+          left -130px
+          bottom -165px
+        +at('m')
+          height 390px
+          left -160px
+          bottom -140px
+        +below('s')
+          height 230px
+          left -90px
+          bottom -70px
+
+  &_mobile
+    height 100vh
+
+  &_smooth &__container
+    transition background-color $smoothDuration $smoothType
+  &_smooth &__header
+    transition top $smoothDuration $smoothType
+  &_smooth &__rocket
+    transition top $smoothDuration $smoothType
+    &-guide
+      transition opacity $smoothDuration $smoothType
+  &_smooth &__clouds
+    transition left $smoothDuration $smoothType
+
+  .theater_stub &
+    height 100vh

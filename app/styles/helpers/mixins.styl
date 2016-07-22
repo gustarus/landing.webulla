@@ -1,0 +1,64 @@
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  -ms-{prop} args
+  -o-{prop} args
+  {prop} args
+
+border-radius()
+  vendor('border-radius', arguments)
+
+box-shadow()
+  vendor('box-shadow', arguments)
+
+transition()
+  vendor('transition', arguments)
+
+transform()
+  vendor('transform', arguments)
+
+transform-origin()
+  vendor('transform-origin', arguments)
+
+user-select()
+  vendor('user-select', arguments)
+
+clearfix()
+  zoom 1
+  &:after
+  &:before
+    content ""
+    display table
+  &:after
+    clear both
+
+noise()
+  background-image url('http://api.thumbr.it/whitenoise-361x370.png?background=ffffffff&noise=626262&density=10&opacity=2')
+
+font-adaptive($group)
+  $fontSizeL = $fontsSizes[$group]['l']
+  $fontSizeM = $fontsSizes[$group]['m']
+  $fontSizeS = $fontsSizes[$group]['s']
+
+  +above('l')
+    font-size $fontSizeL
+  +at('m')
+    font-size $fontSizeM
+  +below('s')
+    font-size $fontSizeS
+
+desktop()
+  .theater.theater_desktop &
+    {block}
+
+mobile()
+  .theater.theater_mobile &
+    {block}
+
+touch()
+  .theater.theater_touch &
+    {block}
+
+noTouch()
+  .theater:not(.theater_touch) &
+    {block}
