@@ -5,3 +5,7 @@
 /web/index.html
 /vendor
 npm-debug.log
+
+# custom php files with credentials
+/web/api/order.php
+/shell/publish.sh
