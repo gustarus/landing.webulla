@@ -1,4 +1,4 @@
-## <img src="http://webulla.ru/static/logo-60x60.png" width="18px" height="18px" style="vertical-align: middle;" /> Webulla studio landing page
+## <img src="http://webulla.ru/static/logo-60x60.png" width="22px" height="22px" style="vertical-align: middle;" /> Webulla studio landing page
 
 This is the scenific project which I've made with new technologies for me like react.js, webpack and others. I've done this for selfimprovement. 
 
@@ -21,12 +21,12 @@ In my project I use:
 ### Launch the application locally
 First we need clone the repo:
 ```bash
-git clone git@github.com:gustarus/landing.webulla.ru.git
+git clone git@github.com:gustarus/landing.webulla.git
 ```
 
 Go to the cloned repo:
 ```bash
-cd landing.webulla.ru
+cd landing.webulla
 ```
 
 Install packages via npm:
@@ -39,9 +39,4 @@ Run the webpack dev server on 8080 port:
 npm run start
 ```
 
-Open in the browser [http://localhost:8080/](http://localhost:8080/) and who-a-la!
-
-### Copyrights
-Kondratenko Pavel  
-Linkedin: https://ru.linkedin.com/in/kondratenkopa  
-Contact with me: gate@webulla.ru
+Open in browser [http://localhost:8080/](http://localhost:8080/) and who-a-la!

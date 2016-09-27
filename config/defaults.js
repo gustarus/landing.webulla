@@ -88,7 +88,8 @@ module.exports = function (rootDir) {
         description: 'Мы делаем сайты. И делаем это на высшем уровне.',
         chunks: ['application', 'vendors'],
         filename: '../index.html',
-        template: './app/templates/index.jade'
+        template: './app/templates/index.jade',
+        inject: false
       })
     ]
   };
