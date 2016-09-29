@@ -28,14 +28,15 @@ html
     meta(name="theme-color", content="#ffffff")
 
     meta(name="yandex-verification", content="66e5eb7b6ef66b26")
+  body
+    #root
+      include partial/stub.html
 
     each item in htmlWebpackPlugin.files.css
       link(href=item, rel="stylesheet")
-  body
-    #root
 
     each item in htmlWebpackPlugin.files.chunks
-      script(href=item.entry, defer=true)
+      script(src=item.entry, defer=true)
 
     include partial/counters.html
 
